@@ -6,8 +6,6 @@ import StepLabel from '@mui/material/StepLabel';
 import { makeStyles } from '@mui/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeActiveStep } from '../redux/slice';
-import AddTask from './AddTask';
-import TaskManagement from './TaskManagement';
 import { steps } from './utils';
 
 const useStyles = makeStyles(() => ({
@@ -28,18 +26,18 @@ function StepBar() {
                 alternativeLabel
             >
                 {steps.map((step) => (
-                <Step 
-                    key={step.id}
-                    onClick={() => dispatch(changeActiveStep(step.id))}
-                >
-                    <StepLabel StepIconProps=
-                        {
-                            activeStep === step.id 
-                                ? {classes: { root: classname.root }}
-                                : null
-                        }
-                    >{step.label}</StepLabel>
-                </Step>
+                    <Step 
+                        key={step.id}
+                        onClick={() => dispatch(changeActiveStep(step.id))}
+                    >
+                        <StepLabel StepIconProps=
+                            {
+                                activeStep === step.id 
+                                    ? {classes: { root: classname.root }}
+                                    : null
+                            }
+                        >{step.label}</StepLabel>
+                    </Step>
                 ))}
             </Stepper>
         </Box>
