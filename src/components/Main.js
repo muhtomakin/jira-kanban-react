@@ -7,10 +7,12 @@ function Main() {
     const activeStep = useSelector(state => state.todos.activeStep);
 
     return (
-        <div>
+        <div style={{
+            padding: '100px'
+        }}>
             <StepBar />
-            {steps.map(step => {
-                if(step.id === activeStep) return step.page;
+                {steps.map(step => {
+                    if(step.id === activeStep) return step.page;
             })}
         </div>
     )
