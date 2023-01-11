@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 To see a project on live [Click](https://incomparable-fox-55648c.netlify.app).
 
 ## Available Scripts
